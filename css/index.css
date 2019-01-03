@@ -1,0 +1,134 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+ 	-webkit-touch-callout: none;
+ 	-khtml-user-select: none;
+ 	-moz-user-select: none;
+ 	-ms-user-select: none;
+ 	user-select: none;
+ }
+ 
+.clear { clear: both; }
+body, input {
+	color: #4a4a4a;
+	background: #f4f4f4;
+}
+
+body { 
+	padding: 7px;
+}
+
+
+h1, h2, div, button, input { margin: 3px 0; }
+h1 { font-size: 1.7em; }
+h2 { font-size: 1.2em; }
+main {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.indent {
+	text-indent: 15px;
+}
+
+/* inputs and buttons */
+input { 
+	width: 100%;
+	border: 1px solid grey;
+	padding: 3px;
+}
+.button {
+	border: none;
+	background: steelblue;
+	color: #f4f4f4;
+	padding: 5px;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.button:active {
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	transform: translate(1px, 1px);
+} 
+
+#selectInput, #textInput {
+	display: none;
+	width: 96%;
+	margin-left: 2%;
+	padding: 2px;
+}
+#textInput { background: #eee }
+
+#mainMenuBtns, #choiceBtns, #textInput {
+	display: none;
+}
+
+#canvas {
+	width: 100%;
+	border: 1px solid grey;
+	height: 10em;
+}
+
+#textOutput {
+	background: #eee;
+	padding: 2px;
+	font-size: .8em;
+	border: 1px solid grey;
+	height: 10em;
+	overflow-y: scroll;
+}
+#textOutput > span:last-Child {
+	font-weight: bold;
+}
+
+#changeTheme {
+	cursor: pointer;
+}
+
+/* stat bars */
+.stat_info {
+	vertical-align: top;
+} 
+
+#enemy_stat_display {
+	display: none;
+	float: right;
+}
+#player_stat_display { display: none; }
+.stat_bar {
+	margin: 0;
+	margin-bottom: 3px;
+	width: 204px;
+	height: 16px;
+	background: black;
+	border-radius: 5px;
+}
+
+.stat_label {
+	position: relative;
+	left: 10px;
+	margin: 0;
+	font-weight: bolder;
+	font-size: 13px;
+	color: #eee;
+	height: 0;
+	z-index: 10;
+}
+#player_health_bar, #player_energy_bar, #player_spirit_bar, #enemy_health_bar, #enemy_energy_bar, #enemy_spirit_bar {
+	position: relative;
+	z-index: 5;
+	top: 2px;
+	left: 2px;
+	height: 12px;
+	background: red;
+	width: 200px;
+}
+#player_energy_bar, #enemy_energy_bar { background: steelblue; }
+#player_spirit_bar, #enemy_spirit_bar { background: purple; }
+#player_spirit, #enemy_spirit { display: none; }
+
+
+

@@ -1,0 +1,1 @@
+var ce = function(){ var e = document.createEvent("HTMLevents"); e.initEvent( 'click', true, true ); e.eventName = 'click'; return e }; var de = function(elem){ window[elem].dispatchEvent( ce() ) }; var autoClick = true; var auto = function(){ setTimeout(function(){ de('button0'); if ( autoClick ){ auto();  } }, 250) }
